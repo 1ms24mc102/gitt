@@ -1,1 +1,17 @@
+pipeline{
+  agent any
 
+  stages{
+    stage('Checkout'){
+      steps{
+          git branch:'main', url:'https://github.com/1ms24mc102/gitt'
+      }
+    }
+    stage('Compile'){
+      steps{
+          echo "Compiling... and running"
+          sh 'python3 hello.py'
+      }
+    }
+  }
+}
