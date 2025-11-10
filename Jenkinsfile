@@ -12,13 +12,13 @@ pipeline{
     stage('Compile'){
       steps{
           echo "Compiling..."
-          ssh 'javac Hello.java'
+          sh 'javac Hello.java'
       }
     }
     stage('Run'){
       steps{
           echo "Running..."
-          ssh 'java Hello'
+          sh 'java Hello'
       }
     }
   }
